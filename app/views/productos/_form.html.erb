@@ -23,6 +23,12 @@
     <%= f.label :Imagen %><br>
     <%= f.text_field :img %>
   </div>
+  <% formato={'Mobiliario de Oficina'=>'Mobiliario de Oficina','Mobiliario de Escolar'=> 'Mobiliario de Escolar', 'JUNJI'=>'junji', 'Urbano'=>'Urbano' } %>
+  <% lista= formato.sort %>
+  <div class="field">
+    <%= f.label :categoria %><br>
+    <%= f.select :categoria, lista %>
+  </div>
   <div class="field">
     <%= f.label :codigo %><br>
     <%= f.text_field :codigo %>
