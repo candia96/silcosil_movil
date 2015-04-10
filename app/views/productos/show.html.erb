@@ -1,0 +1,29 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <legend>
+    <%= @producto.tipo %>
+  </legend>
+  <p>
+    <a href="<%= @producto.img %>"><img src="<%= @producto.img %>" class="img-thumbnail img-responsive" alt="Responsive image"></a>
+  </p>
+
+  <p>
+    <strong class="lead text-info">Precio: $
+    <%= @producto.precio %>
+    </strong>
+  </p>
+
+  <p class="text-justify">
+    <strong>Detalle:
+    <%= @producto.detalle %>
+    </strong>
+  </p>  
+
+  <p>
+    <strong>Codigo:</strong>
+    <%= @producto.codigo %>
+  </p>
+
+  <%= link_to 'Editar', edit_producto_path(@producto),:class => 'btn btn-default' %> 
+  <%= link_to 'Volver', productos_path, :class => 'btn btn-default' %>
+</div>

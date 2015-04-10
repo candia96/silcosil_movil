@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SilcosilMovil</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= csrf_meta_tags %>
+  <style type="text/css">
+	
+		
+		@media (min-width: 1200px){
+			body
+			{
+				
+			}
+			h4
+			{
+				color:white;
+			}			
+		}
+		/*Monitor tablet*/
+		@media (min-width: 768px) and (max-width: 978px){
+			body
+			{
+		
+			}
+			h4
+			{
+				color:white;
+			}		
+		}
+		/*Monitor celular*/
+		@media (max-width: 480px){
+			body
+			{
+				color: grey;
+
+			}
+			
+			h4
+			{
+				color:white;
+				font-size: 70%;
+			}	
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<ul class="nav nav-tabs nav-justified navbar-inverse">
+	  <li role="presentation"><a href="http://localhost:3000"><h4>Inicio</h4></a></li>
+	  <li role="presentation"><a href="http://localhost:3000/productos/"><h4>Inmobiliaria</h4></a></li>
+	  <li role="presentation"><a href="#"><h4>Escolar</h4></a></li>
+	  <li role="presentation"><a href="http://localhost:3000/productos/junji"><h4>Junji</h4></a></li>
+	  <li role="presentation"><a href="#"><h4>Urbano</h4></a></li>
+	</ul>
+
+	<%= yield %>
+</div>
+</body>
+</html>
