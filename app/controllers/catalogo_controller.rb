@@ -3,7 +3,8 @@ class CatalogoController < ApplicationController
   	@productos = Producto.all
   end
   def junji
-  	@productos = Producto.all
+
+  	@productos = Producto.find_by_categoria('junji')
   	
   end
 end

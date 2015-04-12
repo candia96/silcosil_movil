@@ -8,7 +8,7 @@
   </p>
 
   <p>
-    <strong class="lead text-info">Precio: $
+    <strong class=" text-info">Precio: $
     <%= @producto.precio %>
     </strong>
   </p>
@@ -16,8 +16,14 @@
     <strong>Detalle:
     <%= @producto.detalle %>
     </strong>
-  </p>  
-
+  </p>
+  <!--  
+  <p class="text-justify">
+    <strong>categoria:
+    <%= @producto.categoria %>
+    </strong>
+  </p>
+-->
   <p>
     <strong>Codigo SAP:</strong>
     <%= @producto.codigo %>
@@ -25,5 +31,5 @@
 
   <%= link_to 'Volver', root_url, :class => 'btn btn-default' %>
   <%= link_to 'Editar', edit_producto_path(@producto),:class => 'btn btn-success' %> 
-  <%= link_to 'Destroy', @producto, :class => 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Eliminar', @producto, :class => 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

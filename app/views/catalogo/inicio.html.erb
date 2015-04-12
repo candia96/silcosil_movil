@@ -1,26 +1,27 @@
+<legend>
+		 <h2 class="">Todos los productos</h2>
+	</legend>		
 <div class="">
-	<legend>
-		<h2 class="text-center">Todos los productos</h2>
-	</legend>
-</div>
+	  <tbody>
+	    <% @productos.each do |producto| %>
+		    <tr>
+		    	<div class="row">
+			        <div class="col-xs-12">
+			        	<td><h5 class="lead text-justify"><%= producto.tipo %></h5></td>
+			        	<td><img src="<%= producto.img %>" class="img-thumbnail img-responsive" alt="Responsive image"></td>
+			        </div>
+			        <br>
 
-  <tbody>
-    <% @productos.each do |producto| %>
-	    <tr>
-	    	<div class="row">
-		        <div class="col-xs-12">
-		        	<td><h5 class="lead text-justify"><%= producto.tipo %></h5></td>
-		        	<td><img src="<%= producto.img %>" class="img-thumbnail img-responsive" alt="Responsive image"></td>
-		        </div>
-		        <br>
+			        <div class="col-xs-8">
+				        
+				        <td><h5 class="lead text-info">Precio: $ <%= producto.precio %></h5></td>
+				        
+				        <td><%= link_to 'Ver Más', producto , :class => 'btn btn-default btn-sm' %></td>
+			        </div>
+		    	</div>
+		    	<br>
+		    </tr>    
+	    <% end %>
+	  </tbody>
 
-		        <div class="col-xs-8">
-			        
-			        <td><h5 class="lead text-info">Precio: $ <%= producto.precio %></h5></td>
-			        
-			        <td><%= link_to 'Ver Más', producto , :class => 'btn btn-default btn-sm' %></td>
-		        </div>
-	    	</div>
-	    </tr>    
-    <% end %>
-  </tbody>
+</div>  
