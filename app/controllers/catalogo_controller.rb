@@ -1,6 +1,6 @@
 class CatalogoController < ApplicationController
   def inicio
-  	@productos = Producto.all
+  	@productos = Producto.all.limit(5)
   end
   def junji
   	@productos = Producto.all
