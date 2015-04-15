@@ -3,8 +3,15 @@ class CatalogoController < ApplicationController
   	@productos = Producto.all
   end
   def junji
-
-  	@productos = Producto.find_by_categoria('junji')
-  	
+  	@productos = Producto.all
+  end
+  def urbano
+  	@productos = Producto.all
+  end
+    def oficina
+  	@productos = Producto.all
+  end
+      def escolar
+  	@productos = Producto.all
   end
 end

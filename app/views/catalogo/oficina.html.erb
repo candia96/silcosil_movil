@@ -1,7 +1,8 @@
+<zdsd
 <div class="">
 	  <tbody>
 	    <% @productos.each do |producto| %>
-		    <% if producto.categoria == "junji" %>
+		    <% if producto.categoria == "oficina" %>
 			    <tr>
 			    	<div class="row">
 				        <div class="col-xs-12">
@@ -18,7 +19,9 @@
 				        </div>
 			    	</div>
 			    </tr>
-			<% end %>        
+			<% else %>
+			<%=  "No se encuentran datos" %>
+			<% end %>   
 	    <% end %>
 	  </tbody>
 </div>
