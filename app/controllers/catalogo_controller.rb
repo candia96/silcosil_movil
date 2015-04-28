@@ -1,6 +1,6 @@
 class CatalogoController < ApplicationController
   def inicio
-  	@productos = Producto.all.limit(5)
+  	@productos = Producto.paginate(:page => params[:page]).per_page(5)
   end
   def junji
   	@productos = Producto.all

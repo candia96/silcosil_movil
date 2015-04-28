@@ -1,8 +1,10 @@
 <legend>
 		 <h2 class="">Todos los productos</h2>
-	</legend>		
+</legend>
+
 <div class="">
 	  <tbody>
+
 	    <% @productos.each do |producto| %>
 		    <tr>
 		    	<div class="row">
@@ -23,5 +25,7 @@
 		    </tr>    
 	    <% end %>
 	  </tbody>
+
+	 <h3 class="text-center"><%= will_paginate @productos %></h3>
 
 </div>  
